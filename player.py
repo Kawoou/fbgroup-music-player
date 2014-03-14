@@ -13,7 +13,7 @@ if __name__ == '__main__':
 
     if len(sys.argv) == 1:
         print "자동 재생할 페이스북 그룹 주소를 입력해주세요."
-        print "ex) python feedView.py rarelylive"
+        print "ex) python feedView.py rarelylive [ID]"
         exit(1)
 
     if len(sys.argv) == 3:
@@ -52,8 +52,8 @@ if __name__ == '__main__':
             subprocess.call(['afplay','music.cache'])
             print ''
 
-
         if lastest_feed_id is None:
             break
         else:
             lastest_feed_id = re.compile('until=[0-9]+').search(feeds['paging']['next'].encode('utf-8')).group(0)[6:]
+            print '* ID: ' + lastest_feed_id
