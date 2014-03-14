@@ -13,7 +13,7 @@ if __name__ == '__main__':
 
     if len(sys.argv) == 1:
         print "자동 재생할 페이스북 그룹 주소를 입력해주세요."
-        print "ex) python feedView.py rarelylive [ID]"
+        print "ex) python player.py rarelylive [ID]"
         exit(1)
 
     if len(sys.argv) == 3:
